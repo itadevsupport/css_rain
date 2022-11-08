@@ -1,0 +1,73 @@
+body {
+  margin:0;
+  padding:0;
+  background-image: url(../images/autunno.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#pioggia {
+  background-image: url(../images/rain.png);
+  height: 100vh;
+
+  animation: piove 0.5s linear infinite;
+}
+
+#pioggia::before {
+  content: "";
+  position: absolute;
+  top:-300px;
+  left: -200px;
+  background-image: url(../images/fulmini.png);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 800px;
+  transform: rotate(-60deg);
+  animation: fulmina 3s linear infinite;
+}
+
+#pioggia::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  animation: fulmina 5.5s linear infinite;
+}
+
+@keyframes piove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+@keyframes fulmina{
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0;
+  }
+  51%{
+      opacity: 1;
+  }
+  55%{
+      opacity: 0;
+  }
+  60%{
+      opacity: 0;
+  }
+  61%{
+      opacity: 1;
+  }
+  65%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 0;
+  }
+} 
